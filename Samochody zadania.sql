@@ -1,0 +1,10 @@
+#select imie, nazwisko from klienci where idklienta = 4;
+#select * from auta where rocznik = 2010;
+#select * from auta where marka = "Ford";
+#select * from auta where idauta between 2 and 4;
+#select imie, nazwisko from klienci where miasto = "Katowice" and adres like "Rolna%";
+#select * from auta order by ubezpieczenie DESC limit 1;
+#select auta.idauta, auta.marka, auta.model from auta,wypozyczenia where wypozyczenia.idauta = auta.idauta order by wypozyczenia.datawyp ASC limit 1;
+#select klienci.imie, klienci.nazwisko from klienci, wypozyczenia where wypozyczenia.idauta=1 and wypozyczenia.idklienta = klienci.idklienta;
+#select auta.marka, auta.model from auta, klienci, wypozyczenia WHERE klienci.idklienta=4 and klienci.idklienta = wypozyczenia.idklienta and auta.idauta = wypozyczenia.idauta;
+#select auta.marka, auta.model from auta, klienci, wypozyczenia WHERE klienci.nazwisko = "Pastewniak" and klienci.idklienta = wypozyczenia.idklienta and auta.idauta = wypozyczenia.idauta;
