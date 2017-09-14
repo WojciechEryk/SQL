@@ -12,8 +12,9 @@ After insert on wypozyczenia
 FOR EACH ROW
 BEGIN
 insert into `activity`
-set message= (select(Concat("wypozyczono auto: ",
-marka," ", model)) from auta where idAuta = new.idAuta);
+set message= 
+(select(Concat("wypozyczono auto: ",marka," ", model)) 
+from auta where idAuta = new.idAuta);
 END
 |
 
